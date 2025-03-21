@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friendship Check</title>
+</head>
+<body>
+    <h2>Are you Talha's friend?</h2>
+    <form id="friendForm">
+        <label>
+            <input type="radio" name="friendType" value="normal"> Talha's Friend
+        </label><br>
+        <label>
+            <input type="radio" name="friendType" value="good"> Good Friend
+        </label><br>
+        <label>
+            <input type="radio" name="friendType" value="close"> Close Friend
+        </label><br>
+        <label>
+            <input type="radio" name="friendType" value="distant"> Distant Friend
+        </label><br><br>
+        <button type="button" onclick="showResult()">Submit</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        function showResult() {
+            let name = prompt("Enter your name:");
+            let message = "";
+            
+            if (name.toLowerCase() === "iqra") {
+                message = "You are from National High School and scored 91%.";
+            } else if (name.toLowerCase() === "ayesha") {
+                message = "You live in Kalyan and study in Sonawne College (FY B.Com).";
+            } else {
+                message = "Thanks for visiting!";
+            }
+
+            document.getElementById("result").innerText = message;
+        }
+    </script>
+</body>
+</html>
